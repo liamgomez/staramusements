@@ -14,23 +14,52 @@ body {
 
 //sidebar
 
+$carat:60;
+$insert-coin-height:sqrt((($carat)*($carat))+(($carat)*($carat)));
+
 .side-bar {
-  background-color:lighten($background-color,5%);
+  background-color:$background-color;
   width:$sidenav-size;
   height:$sidenav-height;
   float:left;
   position:relative;
-  .insert-coin {
-    position:absolute;
-    bottom:0;
-    left:0;
-    background-color:$clr-sa-pink;
-    padding:$s;
-    font-family:$h2font;
-    color:$clr-sa-cream;
-    font-size:20px;
-    width:100%;
-    text-transform:uppercase;
+  @extend .hide-sm;
+  .bar-content {
+    width:$sidenav-size;
+    height:$sidenav-height;
+    position:fixed;
+    z-index:200;
+    .branding {
+      background-image:url('../assets/logo-dark-text.svg');
+      background-size:90% auto;
+      background-position:50% 20%;
+      height:$sidenav-height;
+      background-repeat:no-repeat;
+    }
+    .insert-coin {
+      position:absolute;
+      bottom:0-(($insert-coin-height)/2)+px;
+      left:0;
+      background-color:$clr-sa-pink;
+      text-align:center;
+      height:$insert-coin-height+px;
+      line-height:$insert-coin-height+px;
+      font-family:$h2font;
+      color:$clr-sa-cream;
+      font-size:($carat/2.5)+px;
+      width:100%;
+      text-transform:uppercase;
+    }
+    .carat {
+      width:$carat+px;
+      height:$carat+px;
+      position:absolute;
+      right:(0-($carat)/2)+px;
+      bottom:(0-(($carat)/2))+px;
+      transform-origin:center;
+      transform:rotate(45deg);
+      background-color:$clr-sa-pink;
+    }
   }
 }
 
@@ -39,4 +68,7 @@ body {
 .wrapper {
   width:(100%)-$sidenav-size;
   float:left;
+  @media ($media-sm) {
+    width:100%;
+  }
 }

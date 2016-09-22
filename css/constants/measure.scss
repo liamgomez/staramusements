@@ -13,7 +13,7 @@ $footer-height:70vh;
 // spacing
 $s:15px;
 $content-spacing:0px;
-$indent:50px;
+$indent:85px;
 
 // columns
 $col-full:100%;
@@ -21,3 +21,39 @@ $col-half:($col-full)/2;
 $col-third:($col-full)/3;
 $col-quarter:($col-half)/2;
 $col-eighth:($col-quarter)/2;
+
+// blocks
+$block-height:50vh;
+
+// media query
+
+$media-sm:"max-width:676px";
+
+.hide-sm {
+  @media ($media-sm) {
+    display:none;
+  }
+}
+
+// alignment
+@mixin vertical-align($position: relative) {
+  position: $position;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+// algorithms
+
+@function sqrt($r) {
+  $x0: 1;
+  $x1: $x0;
+
+  @for $i from 1 through 10 {
+    $x1: $x0 - ($x0 * $x0 - abs($r)) / (2 * $x0);
+    $x0: $x1;
+  }
+
+  @return $x1;
+}

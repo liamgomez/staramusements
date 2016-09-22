@@ -16,8 +16,8 @@ $button-font-size:$bodytext-size;
 // header
 
 $header-giant-size:160px;
-$header-biggest-size:80px;
-$header-bigger-size:70px;
+$header-biggest-size:111px;
+$header-bigger-size:60px;
 $header-big-size:50px;
 $header-small-size:30px;
 
@@ -25,7 +25,7 @@ $header-small-size:30px;
 
 p {
   font-size:$bodytext-size;
-  line-height:$bodytext-size*2;
+  line-height:($bodytext-size)-2px;
 }
 
 h1 {
@@ -36,5 +36,18 @@ h1 {
 h2 {
   font-family:$h2font;
   font-weight:normal;
+  font-size:$header-big-size;
+  line-height:($header-big-size);
   text-transform:uppercase;
+}
+
+.red-head {
+  color:$clr-sa-red;
+}
+
+h3 {
+  font-family:$h1font;
+  font-weight:normal;
+  font-size:$header-biggest-size;
+  line-height:($header-biggest-size)-2px;
 }

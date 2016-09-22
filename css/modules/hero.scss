@@ -9,18 +9,29 @@
 .page-hero {
   background-color:$background-color;
   height:$sidenav-height;
+  position:relative;
   .content {
-    padding-top:20vh;
+    position:absolute;
+    top:50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    padding:0 $s 0 $indent;
     h2 {
       font-size:$header-bigger-size;
       line-height:$header-bigger-size;
       margin:0px;
+      padding-left:$s;
     }
     h1 {
       font-size:$header-giant-size;
-      line-height:$header-giant-size;
+      line-height:($header-giant-size)-30px;
       letter-spacing:8px;
-      margin:0px;
+      margin:$s 0 0 0;
+    }
+    p {
+      margin:0;
+      padding:0px 0px 0px $s;
     }
   }
 }
