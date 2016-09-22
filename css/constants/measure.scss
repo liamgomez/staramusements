@@ -1,0 +1,23 @@
+// measure.scss
+
+// nav
+$sidenav-size: 15%;
+$sidenav-height: 90vh;
+$navspacing:30px;
+
+// header
+$header-height:60vh;
+// footer
+$footer-height:70vh;
+
+// spacing
+$s:15px;
+$content-spacing:0px;
+$indent:50px;
+
+// columns
+$col-full:100%;
+$col-half:($col-full)/2;
+$col-third:($col-full)/3;
+$col-quarter:($col-half)/2;
+$col-eighth:($col-quarter)/2;

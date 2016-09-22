@@ -1,0 +1,42 @@
+// page.scss
+
+@import "../constants/measure";
+@import "../constants/palette";
+@import "../constants/typography";
+
+body {
+  background-color:$background-color;
+  font-family:$bodyfont;
+  color:$bodyfont-color;
+  margin:0;
+  padding:0;
+}
+
+//sidebar
+
+.side-bar {
+  background-color:lighten($background-color,5%);
+  width:$sidenav-size;
+  height:$sidenav-height;
+  float:left;
+  position:relative;
+  .insert-coin {
+    position:absolute;
+    bottom:0;
+    left:0;
+    background-color:$clr-sa-pink;
+    padding:$s;
+    font-family:$h2font;
+    color:$clr-sa-cream;
+    font-size:20px;
+    width:100%;
+    text-transform:uppercase;
+  }
+}
+
+//wrapper settings
+
+.wrapper {
+  width:(100%)-$sidenav-size;
+  float:left;
+}

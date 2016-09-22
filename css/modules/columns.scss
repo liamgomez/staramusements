@@ -1,0 +1,49 @@
+// columns.scss
+
+@import "../constants/measure";
+@import "../constants/palette";
+
+.col-full,
+.col-half,
+.col-third,
+.col-two-third,
+.col-quarter,
+.col-
+.col-eighth {
+  float:left;
+}
+
+.col-full {
+  width:$col-full;
+}
+
+.col-half {
+  width:$col-half;
+}
+
+.col-third {
+  width:$col-third;
+}
+.col-two-third {
+  width:$col-third*2;
+}
+
+.col-quarter {
+  width:$col-quarter;
+}
+.col-three-quarter {
+  width:$col-quarter*3;
+}
+
+.col-eighth {
+  width:$col-eighth;
+}
+.col-three-eighth {
+  width:$col-eighth*3;
+}
+.col-five-eighth {
+  width:$col-eighth*5;
+}
+.col-seven-eighth {
+  width:$col-eighth*7;
+}

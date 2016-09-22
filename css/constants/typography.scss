@@ -1,0 +1,40 @@
+// typography.scss
+
+@import "../constants/palette";
+
+@import 'https://fonts.googleapis.com/css?family=Karla|Oswald:400,700|Shrikhand';
+
+// body
+$bodyfont: 'Karla', 'Helvetica', 'Tahoma', sans-serif;
+$h1font: 'Shrikhand', 'Cooper', sans-serif;
+$h2font: 'Oswald', sans-serif;
+$bodytext-size: 25px;
+
+// buttons
+$button-font-size:$bodytext-size;
+
+// header
+
+$header-giant-size:160px;
+$header-biggest-size:80px;
+$header-bigger-size:70px;
+$header-big-size:50px;
+$header-small-size:30px;
+
+// styles
+
+p {
+  font-size:$bodytext-size;
+  line-height:$bodytext-size*2;
+}
+
+h1 {
+  font-family:$h1font;
+  font-weight:normal;
+}
+
+h2 {
+  font-family:$h2font;
+  font-weight:normal;
+  text-transform:uppercase;
+}

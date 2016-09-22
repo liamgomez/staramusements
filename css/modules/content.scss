@@ -1,0 +1,62 @@
+// content.scss
+
+@import "../constants/measure";
+@import "../constants/palette";
+@import "../constants/typography";
+@import "../constants/animation";
+@import "../vendor/normalize";
+
+// universal
+.content {
+  margin:($content-spacing)/2;
+  position:relative;
+  overflow:hidden;
+}
+.sq-content {
+  top:($content-spacing)/2;
+  bottom:($content-spacing)/2;
+  right:($content-spacing)/2;
+  left:($content-spacing)/2;
+  position:absolute;
+}
+
+
+// square
+.sq-eighth {
+  padding-bottom:$col-eighth;
+  position:relative;
+}
+.sq-quarter {
+  padding-bottom:$col-quarter;
+  position:relative;
+}
+.sq-third {
+  padding-bottom:$col-third;
+  position:relative;
+}
+.sq-half {
+  padding-bottom:$col-half;
+  position:relative;
+}
+.sq-full {
+  padding-bottom:$col-full;
+  position:relative;
+}
+
+// blocks
+
+.teal-block {
+  background-color:$clr-sa-cyan;
+}
+.cream-block {
+  background-color:$clr-sa-cream;
+}
+.navy-block {
+  background-color:$clr-sa-navy;
+}
+.red-block {
+  background-color:$clr-sa-red;
+}
+.gold-block {
+  background-color:$clr-sa-gold;
+}
