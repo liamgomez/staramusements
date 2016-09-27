@@ -35,7 +35,10 @@ body {
     float:none;
     position:fixed;
     width:100%;
-    height:$s*5;
+    height:$s*4;
+  }
+  @media ($media-lg) {
+    width:$lg-sidenav-size;
   }
   .bar-content {
     width:$sidenav-size;
@@ -45,8 +48,11 @@ body {
     z-index:200;
     @media ($media-md) {
       background:none;
-      height:0;
+      height:$s*4;
       width:100%;;
+    }
+    @media ($media-lg) {
+      width:$lg-sidenav-size;
     }
     .branding {
       background-image:url('../assets/logo-dark-text.svg');
@@ -55,7 +61,7 @@ body {
       height:$sidenav-height;
       background-repeat:no-repeat;
       @media ($media-md) {
-        height:$s*5;
+        height:$s*4;
         width:100%;
         background-image:url('../assets/star-headlogo.svg');
         background-size:auto 80%;
@@ -77,7 +83,10 @@ body {
   float:left;
   margin-bottom:$footer-height;
   @media ($media-md) {
-    margin-bottom:$footer-mobile-height*2;
+    margin-bottom:0;
+  }
+  @media ($media-lg) {
+    width:(100%)-$lg-sidenav-size;
   }
   &:after {
     content: "";

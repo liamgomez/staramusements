@@ -8,7 +8,7 @@
 
 .page-hero {
   background-color:$background-color;
-  height:$sidenav-height;
+  min-height:$sidenav-height;
   position:relative;
   .content {
     position:absolute;
@@ -18,17 +18,39 @@
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     padding:0 $s 0 $indent;
+    @media ($media-md) {
+      padding:20vh $s*2 $indent $s*2;
+    }
+    @media ($media-sm) {
+      -webkit-transform:none;
+      -ms-transform:none;
+      transform:none;
+      top:0;
+      position:relative;
+    }
     h2 {
       font-size:$header-bigger-size;
       line-height:$header-bigger-size;
       margin:0px;
       padding-left:$s;
+      @media ($media-sm) {
+        font-size:($header-bigger-size)/1.5;
+        line-height:($header-bigger-size)-20px;
+      }
     }
     h1 {
       font-size:$header-giant-size;
       line-height:($header-giant-size)-30px;
       letter-spacing:8px;
       margin:$s 0 0 0;
+      @media ($media-md) {
+        line-height:($header-giant-size)-40px;
+      }
+      @media ($media-sm) {
+        font-size:($header-giant-size)/1.85;
+        line-height:($header-giant-size/1.85)-20px;
+        letter-spacing:3.5px;
+      }
     }
     p {
       margin:0;

@@ -2,6 +2,7 @@
 
 // nav
 $sidenav-size: 15%;
+$lg-sidenav-size: 20%;
 $sidenav-height: 90vh;
 $navspacing:30px;
 
@@ -31,7 +32,7 @@ $block-height:50vh;
 
 $media-sm:"max-width:676px";
 $media-md:"max-width:1024px";
-$media-lg:"max-width:1440px";
+$media-lg:"max-width:0px";
 
 .hide-sm {
   @media ($media-sm) {

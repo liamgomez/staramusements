@@ -47,6 +47,8 @@ $insert-coin-height:sqrt((($carat)*($carat))+(($carat)*($carat)));
     bottom:0;
     left:0;
     width:100%;
+    height:($insert-coin-height/1.5)+px;
+    line-height:($insert-coin-height/1.5)+px;
     z-index:800;
     padding-right:0;
     text-align:center;
