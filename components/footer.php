@@ -1,37 +1,33 @@
+      </div>
     </div>
     <footer class="row footer">
-      <div class="col-third">
-        <img src="assets/arcade-machine.svg" />
-      </div>
-      <div class="col-two-third">
-        <h2>Serving the Reno Tahoe Area Since 1995</h2>
-        <h2 class="red-head">Want to work with us? Let's chat</h2>
-        <form class="contact-form">
-          <input type="text" placeholder="Name" id="first_name" name="first_name" class="col-half" required></input>
-          <input type="text" placeholder="Email" id="email" name="email" class="col-half" required></input>
-          <input type="text" placeholder="Email" id="email" name="email" class="col-half" required></input>
-          <input type="text" placeholder="Phone Number" id="phone_number" name="phone_number" class="col-half" required></input>
-          <input type="text" placeholder="I want to lease for" id="reason" name="reason" class="col-half" required></input>
-          <textarea rows="10" class="col-full">
-            Questions? Comments? Drinks?
-          </textarea>
-          <input type="submit" value="Send Message" name="submit" class="red-button"></input>
-        </form>
-      </div>
-      <div class="footer-location">
-        <div class="col-third email">
-          info@staramusementsreno.com
-        </div>
-        <div class="col-third email">
-          info@staramusementsreno.com
-        </div>
-        <div class="col-third phone">
-          +1 775 685 0180
-        </div>
-        <div class="col-third copyright">
-          Star Amusements Company © 2016
-        </div>
-      </div>
+      <?php include('contact-us.php') ?>
     </footer>
+    <script src="js/parallax-element.js"></script>
+    <script>
+    $('.plax-1').parallaxElement({
+      defaultSpeed: -0.05
+    });
+    $('.plax-2').parallaxElement({
+      defaultSpeed: -0.1
+    });
+    $('.plax-3').parallaxElement({
+      defaultSpeed: -0.2
+    });
+    $('.plax-plus-1').parallaxElement({
+      defaultSpeed: -0.05
+    });
+    $('.plax-plus-2').parallaxElement({
+      defaultSpeed: -0.1
+    });
+    $('.plax-plus-3').parallaxElement({
+      defaultSpeed: -0.2
+    });
+    </script>
+    <script type="text/javascript" src="components/spaceinvaders/javascripts/Const.js"></script>
+    <script type="text/javascript" src="components/spaceinvaders/javascripts/SpaceShip.js"></script>
+    <script type="text/javascript" src="components/spaceinvaders/javascripts/CDetection.js"></script>
+    <script type="text/javascript" src="components/spaceinvaders/javascripts/Game.js"></script>
+    <script type="text/javascript" src="components/spaceinvaders/javascripts/Main.js"></script>
   </body>
 </html>

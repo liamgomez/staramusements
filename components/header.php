@@ -10,17 +10,23 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <link rel="stylesheet" href="css/main.min.css">
     <script src="js/functions.js"></script>
+    <script src="js/jquery-1.8.2.min.js"></script>
   </head>
-  <body>
-    <nav class="side-bar">
-      <div class="bar-content">
-        <div class="branding">
-        </div>
-        <div class="carat">
-        </div>
-        <div class="insert-coin">
-          Insert Coin to Play
-        </div>
-      </div>
-    </nav>
+  <body id="star-body" class="scroll">
+    <div class="game-container game-hidden" id="game-container">
+
+      hi
+    </div>
     <div class="wrapper">
+      <nav class="side-bar">
+        <div id="bar-content" class="bar-content">
+          <div class="branding">
+          </div>
+          <div class="carat">
+          </div>
+          <div class="insert-coin game-collapsed" id="game-switch" onclick="gameKey()">
+            Insert Coin to Play
+          </div>
+        </div>
+      </nav>
+      <div id="page-content" class="page-content">

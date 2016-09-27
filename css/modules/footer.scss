@@ -4,3 +4,61 @@
 @import "../constants/typography";
 @import "../constants/measure";
 @import "../vendor/normalize";
+
+input, textarea {
+  background-color:#EDE8CB;
+  border:none;
+  outline:none;
+  border-radius:4px;
+  border:$clr-sa-cream $s/2 solid;
+  padding:$s;
+  color:$clr-sa-red;
+  text-transform:uppercase;
+  font-family:$h2font !important;
+}
+
+input[type="submit"] {
+  background-color:$clr-sa-red;
+  color:$clr-sa-cream;
+}
+
+textarea {
+  clear:both;
+}
+
+.footer {
+  background-color:$clr-sa-cream;
+  width:100%-($sidenav-size);
+  margin-left:$sidenav-size;
+  color:$clr-sa-navy;
+  clear:both;
+  min-height:$footer-height;
+  overflow:hidden;
+  position:fixed;
+  bottom:0;
+  right:0;
+  z-index:-1;
+  .center-y {
+    width:100%;
+  }
+  .foot-img-holder {
+    text-align:center;
+  }
+  .contact-holder {
+    padding-right:$indent;
+    h2 {
+      $foot-head-size:($header-big-size)-10px;
+      font-size:$foot-head-size;
+      line-height:($foot-head-size)+5px;
+    }
+  }
+  .footer-location {
+    font-family:$h2font;
+    margin-top:$indent/2;
+    color:$clr-sa-navy;
+    text-transform:uppercase;
+    .col-third {
+      text-align:center;
+    }
+  }
+}

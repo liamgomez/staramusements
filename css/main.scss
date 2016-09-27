@@ -10,11 +10,12 @@
 @import "constants/typography";
 
 // modules: reusable content, modular sections, building blocks
-@import "modules/footer";
 @import "modules/hero";
 @import "modules/rows";
 @import "modules/columns";
 @import "modules/content";
+@import "modules/game";
 
 // page: page specific styling & overall layout
 @import "page/page.scss";
+@import "modules/footer";

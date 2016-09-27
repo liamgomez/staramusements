@@ -12,10 +12,17 @@ body {
   padding:0;
 }
 
-//sidebar
+.scroll {
+  overflow-y:auto;
+  overflow-x:hidden;
+}
 
-$carat:60;
-$insert-coin-height:sqrt((($carat)*($carat))+(($carat)*($carat)));
+.scroll-locked {
+  overflow-y:hidden;
+  overflow-x:hidden;
+}
+
+//sidebar
 
 .side-bar {
   background-color:$background-color;
@@ -28,6 +35,7 @@ $insert-coin-height:sqrt((($carat)*($carat))+(($carat)*($carat)));
     width:$sidenav-size;
     height:$sidenav-height;
     position:fixed;
+    background-color:$background-color;
     z-index:200;
     .branding {
       background-image:url('../assets/logo-dark-text.svg');
@@ -36,38 +44,24 @@ $insert-coin-height:sqrt((($carat)*($carat))+(($carat)*($carat)));
       height:$sidenav-height;
       background-repeat:no-repeat;
     }
-    .insert-coin {
-      position:absolute;
-      bottom:0-(($insert-coin-height)/2)+px;
-      left:0;
-      background-color:$clr-sa-pink;
-      text-align:center;
-      height:$insert-coin-height+px;
-      line-height:$insert-coin-height+px;
-      font-family:$h2font;
-      color:$clr-sa-cream;
-      font-size:($carat/2.5)+px;
-      width:100%;
-      text-transform:uppercase;
-    }
-    .carat {
-      width:$carat+px;
-      height:$carat+px;
-      position:absolute;
-      right:(0-($carat)/2)+px;
-      bottom:(0-(($carat)/2))+px;
-      transform-origin:center;
-      transform:rotate(45deg);
-      background-color:$clr-sa-pink;
-    }
   }
 }
 
 //wrapper settings
 
 .wrapper {
+  width:100%;
+  min-height:100vh;
+}
+.page-content {
   width:(100%)-$sidenav-size;
   float:left;
+  padding-bottom:$footer-height;
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
   @media ($media-sm) {
     width:100%;
   }

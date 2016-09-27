@@ -1,0 +1,99 @@
+// game.scss
+
+@import "../vendor/normalize";
+@import "../constants/measure";
+@import "../constants/palette";
+@import "../constants/typography";
+@import "../constants/animation";
+
+$carat:60;
+$insert-coin-height:sqrt((($carat)*($carat))+(($carat)*($carat)));
+
+@keyframes expand-game {
+    0% {
+      background-color: $clr-sa-pink;
+      width:100%;
+      height:$insert-coin-height;
+    }
+    50% {
+      background-color: $clr-sa-pink;
+      width:100vw;
+      height:$insert-coin-height;
+    }
+    100% {
+      background-color: $clr-sa-navy;
+      width:100vw;
+      height:100vh;
+    }
+}
+
+.insert-coin {
+  position:absolute;
+  bottom:0-(($insert-coin-height)/2)+px;
+  left:0;
+  background-color:$clr-sa-pink;
+  padding-right:$s;
+  text-align:right;
+  height:$insert-coin-height+px;
+  line-height:$insert-coin-height+px;
+  font-family:$h2font;
+  color:$clr-sa-cream;
+  font-size:($carat/2.5)+px;
+  width:100%;
+  text-transform:uppercase;
+  transition:all .5s ease;
+}
+.carat {
+  width:$carat+px;
+  height:$carat+px;
+  position:absolute;
+  right:(0-($carat)/2)+px;
+  bottom:(0-(($carat)/2))+px;
+  transform-origin:center;
+  transform:rotate(45deg);
+  background-color:$clr-sa-pink;
+}
+
+.game-expand {
+  position:absolute;
+  background-color: $clr-sa-navy;
+  width:100vw;
+  height:100vh;
+  bottom:0-(100vh-($sidenav-height));
+  color:rgba($clr-sa-cream,0);
+}
+
+.game-container {
+  z-index:9999;
+  position:fixed;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0;
+}
+
+.game-visible {
+  @include fadein(3s);
+  display:block;
+  opacity:1;
+}
+
+.game-hidden {
+  display:none;
+  opacity:0;
+}
+
+#background {
+  position:absolute;
+  z-index:0;
+  padding:0;
+  margin:0;
+  display:none;
+}
+#gameview {
+  position:absolute;
+  z-index:1;
+  margin:0;
+  padding:0;
+  display:block;
+}
