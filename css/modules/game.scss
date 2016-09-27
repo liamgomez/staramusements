@@ -29,6 +29,7 @@ $insert-coin-height:sqrt((($carat)*($carat))+(($carat)*($carat)));
 
 .insert-coin {
   position:absolute;
+  cursor:pointer;
   bottom:0-(($insert-coin-height)/2)+px;
   left:0;
   background-color:$clr-sa-pink;
