@@ -64,7 +64,7 @@ $insert-coin-height:sqrt((($carat)*($carat))+(($carat)*($carat)));
 }
 
 .game-container {
-  z-index:9999;
+  z-index:900;
   position:fixed;
   top:0;
   left:0;
@@ -85,14 +85,14 @@ $insert-coin-height:sqrt((($carat)*($carat))+(($carat)*($carat)));
 
 #background {
   position:absolute;
-  z-index:0;
+  z-index:960;
   padding:0;
   margin:0;
   display:none;
 }
 #gameview {
   position:absolute;
-  z-index:1;
+  z-index:970;
   margin:0;
   padding:0;
   display:block;

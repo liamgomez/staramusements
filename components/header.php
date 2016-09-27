@@ -14,8 +14,7 @@
   </head>
   <body id="star-body" class="scroll">
     <div class="game-container game-hidden" id="game-container">
-
-      hi
+      <?php include('components/game.php') ?>
     </div>
     <div class="wrapper">
       <nav class="side-bar">

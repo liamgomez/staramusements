@@ -28,9 +28,23 @@ $block-height:50vh;
 // media query
 
 $media-sm:"max-width:676px";
+$media-md:"max-width:1024px";
+$media-lg:"max-width:1440px";
 
 .hide-sm {
   @media ($media-sm) {
+    display:none;
+  }
+}
+
+.hide-md {
+  @media ($media-md) {
+    display:none;
+  }
+}
+
+.hide-lg {
+  @media ($media-lg) {
     display:none;
   }
 }

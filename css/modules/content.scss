@@ -168,7 +168,6 @@
 }
 
 .circle-row {
-  @extend .hide-sm;
   position:relative;
   .circle-brand {
     $brand-size:$block-height+10vh;
@@ -179,11 +178,12 @@
     background-repeat:no-repeat;
     border-radius:100%;
     background-position:center 40%;
-    z-index:2000;
+    z-index:800;
     width:$brand-size;
     height:$brand-size;
     right:$indent;
     @include vertical-align(absolute);
+    @extend .hide-md;
   }
 }
 

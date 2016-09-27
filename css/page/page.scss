@@ -30,7 +30,7 @@ body {
   height:$sidenav-height;
   float:left;
   position:relative;
-  @extend .hide-sm;
+  @extend .hide-md;
   .bar-content {
     width:$sidenav-size;
     height:$sidenav-height;
@@ -56,13 +56,13 @@ body {
 .page-content {
   width:(100%)-$sidenav-size;
   float:left;
-  padding-bottom:$footer-height;
+  margin-bottom:$footer-height;
   &:after {
     content: "";
     display: table;
     clear: both;
   }
-  @media ($media-sm) {
+  @media ($media-md) {
     width:100%;
   }
 }
