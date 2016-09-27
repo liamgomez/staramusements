@@ -41,15 +41,21 @@ textarea {
   @media ($media-md) {
     width:100%;
     margin-left:0;
+    min-height:$footer-mobile-height;
+    padding-bottom:$s*5;
   }
   .center-y {
     width:100%;
   }
   .foot-img-holder {
     text-align:center;
+    @extend .hide-md;
   }
   .contact-holder {
     padding-right:$indent;
+    @media ($media-md) {
+      padding-right:0;
+    }
     h2 {
       $foot-head-size:($header-big-size)-10px;
       font-size:$foot-head-size;

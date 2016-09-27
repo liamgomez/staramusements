@@ -45,7 +45,7 @@
 .col-quarter,
 .col-eighth {
   float:left;
-  @media (max-width:676px) {
+  @media ($media-md) {
     float:none;
     display:block;
     width:100%;

@@ -43,12 +43,25 @@ body {
     position:fixed;
     background-color:$background-color;
     z-index:200;
+    @media ($media-md) {
+      background:none;
+      height:0;
+      width:100%;;
+    }
     .branding {
       background-image:url('../assets/logo-dark-text.svg');
       background-size:90% auto;
       background-position:50% 20%;
       height:$sidenav-height;
       background-repeat:no-repeat;
+      @media ($media-md) {
+        height:$s*5;
+        width:100%;
+        background-image:url('../assets/star-headlogo.svg');
+        background-size:auto 80%;
+        background-position:50% 50%;
+        background-repeat:no-repeat;
+      }
     }
   }
 }
@@ -63,6 +76,9 @@ body {
   width:(100%)-$sidenav-size;
   float:left;
   margin-bottom:$footer-height;
+  @media ($media-md) {
+    margin-bottom:$footer-mobile-height*2;
+  }
   &:after {
     content: "";
     display: table;
