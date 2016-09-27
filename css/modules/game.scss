@@ -42,6 +42,15 @@ $insert-coin-height:sqrt((($carat)*($carat))+(($carat)*($carat)));
   width:100%;
   text-transform:uppercase;
   transition:all .5s ease;
+  @media ($media-md) {
+    position:fixed;
+    bottom:0;
+    left:0;
+    width:100%;
+    z-index:800;
+    padding-right:0;
+    text-align:center;
+  }
 }
 .carat {
   width:$carat+px;
@@ -52,6 +61,7 @@ $insert-coin-height:sqrt((($carat)*($carat))+(($carat)*($carat)));
   transform-origin:center;
   transform:rotate(45deg);
   background-color:$clr-sa-pink;
+  @extend .hide-md;
 }
 
 .game-expand {
@@ -61,6 +71,12 @@ $insert-coin-height:sqrt((($carat)*($carat))+(($carat)*($carat)));
   height:100vh;
   bottom:0-(100vh-($sidenav-height));
   color:rgba($clr-sa-cream,0);
+  @media ($media-md) {
+    position:fixed;
+    width:100%;
+    height:100vh;
+    bottom:0;
+  }
 }
 
 .game-container {

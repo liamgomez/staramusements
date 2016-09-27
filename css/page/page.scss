@@ -30,7 +30,8 @@ body {
   height:$sidenav-height;
   float:left;
   position:relative;
-  @media (max-width:hide-md) {
+  z-index:800;
+  @media ($media-md) {
     float:none;
     position:fixed;
     width:100%;
