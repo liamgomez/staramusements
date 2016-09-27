@@ -30,7 +30,12 @@ body {
   height:$sidenav-height;
   float:left;
   position:relative;
-  @extend .hide-md;
+  @media (max-width:hide-md) {
+    float:none;
+    position:fixed;
+    width:100%;
+    height:$s*5;
+  }
   .bar-content {
     width:$sidenav-size;
     height:$sidenav-height;

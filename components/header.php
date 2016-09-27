@@ -14,6 +14,9 @@
   </head>
   <body id="star-body" class="scroll">
     <div class="game-container game-hidden" id="game-container">
+      <div class="close-overlay" onclick="closeGame()">
+        <div class="close-x"></div>
+      </div>
       <?php include('components/game.php') ?>
     </div>
     <div class="wrapper">
